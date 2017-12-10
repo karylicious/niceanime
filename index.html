@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">     
+    <title>Nice Anime</title>
+    <link rel="shortcut icon" href="icon.ico"/>
+    <link rel="stylesheet" type="text/css" href="./jquery-ui-themes-1.11.4/themes/south-street/jquery-ui.css">	
+    <script src='./jquery-ui-1.11.4/external/jquery/jquery.js'></script>
+	<script src='./jquery-ui-1.11.4/jquery-ui.js'></script>
+	<link rel="stylesheet" type="text/css" href="style.css">  
+    <script>
+	    $(function(){	
+		   $('#div_signin').hide();
+		   $('#div_signup').hide();		   
+		});
+		function signin(){		
+		  $('#div_signin').dialog({	
+		      resizable:false,
+			  modal:true,
+              dialogClass:'no-close dialogModal'                   				   
+		  });	
+		}	
+	    function signup(){
+		  $('#div_signup').dialog({	
+			  resizable:false,
+			  modal:true,
+              dialogClass:'no-close dialogModal'				
+		  });
+		}
+		$(document).ready(function(){
+		    var currentPosition=0;
+			var numberOfSlides=$('.slide').length;
+			var slideShowInterval;
+			var speed=3000;
+				
+			slideShowInterval= setInterval(changePosition, speed);
+			$('.slide').css('width', $('#slideshowWindow').width());
+			$('.slide').wrapAll('<div id="slidesHolder"></div>');
+			$('.slide').css({'float':'left'});			
+			$('#slidesHolder').css('width', $('#slideshowWindow').width() * numberOfSlides);
+				
+			function changePosition(){
+			   if(currentPosition== numberOfSlides-1)currentPosition=0;				   
+			   else currentPosition++;				   
+			   moveSlide();
+			}
+			function moveSlide(){
+			   $('#slidesHolder').animate({'marginLeft': $('#slideshowWindow').width() *(-currentPosition)})				
+			}			
+			$( ".slideImg" ).css('width', $('#slideshowWindow').width());			
+		});
+		
+		$( window ).resize(function() {		    
+             $( ".slideImg" ).css('width', $('#slideshowWindow').width());			 
+			 $('#slidesHolder').css('width', $('#slideshowWindow').width()* $('.slide').length);
+			 $('.slide').css('width', $('#slideshowWindow').width());			 
+        });
+		
+		
+	</script>	
+</head>
+<body>    
+    <div id="div_header">
+        <div id="div_logo">
+		   <a href="index.html"><img id="imglogo" src="./imgs/logo.png"></a>
+		</div>
+        <div id="div_nav">
+            <a class="header_links" href="anime.html">Anime</a>
+            <a class="header_links" href="manga.html">Manga</a>
+            <a class="header_links" href="contact.html">Contact Us</a>            
+        </div>
+		<div id="div_login">		    
+			<a class="a_links" onclick="signin();">Log in</a>	       
+		    <span class="vline">|</span>
+		    <a class="a_links" onclick="signup();">Sign up</a>		    
+		</div>
+    </div>
+    <div id="div_body" style="margin-top:0px;">	   
+	   <div>
+       <div id="slideshowWindow">	
+          <div class="slide">
+		     <img class="slideImg" src="./imgs/slide1.jpg">
+			 <div class="slideText">
+			    <h2 class="slideTitle">Kuroko's Basketball Season 1</h2>
+				<p class="slideDes"></p>
+				<p class="slideLink"><a href="anime_details.html">Click here</a></p>
+			</div>			 
+		  </div>
+          <div class="slide">
+		     <img class="slideImg" src="./imgs/slide2.jpg">
+			 <div class="slideText">
+			    <h2 class="slideTitle">Saint Seiya: Soul of gold</h2>
+				<p class="slideDes"></p>
+				<p class="slideLink"><a href="#">Click here</a></p>
+			</div>
+		  </div>
+          <div class="slide">
+		     <img class="slideImg" src="./imgs/slide3.jpg">
+			 <div class="slideText">
+			    <h2 class="slideTitle">Sword Art Online</h2>
+				<p class="slideDes"></p>
+				<p class="slideLink"><a href="#">Click here</a></p>
+			</div>
+	       </div>
+		   <div class="slide">
+		     <img class="slideImg" src="./imgs/slide4.jpg">
+			 <div class="slideText">
+			    <h2 class="slideTitle">Mobile Suit Gundam</h2>
+				<p class="slideDes"></p>
+				<p class="slideLink"><a href="#">Click here</a></p>
+			</div>
+	       </div>
+	    </div>
+	  </div>
+	  <div style="text-align:center; margin-top:50px;"><h1>Popular Anime this week</h1></div><br/><br/>	  
+	  <div style="display:table; margin: 0 auto;">
+            <div class="item_column" style="background-image:url('./imgs/img1.jpg');"><div class="item_descr">Cardfight!! Vanguard G Girls</div></div>
+            <div class="item_column" style="background-image:url('./imgs/img2.jpg');"><div class="item_descr">God Eater</div></div>
+            <div class="item_column" style="background-image:url('./imgs/img6.jpg');"><div class="item_descr">One-punch man</div></div>
+            <div class="item_column" style="background-image:url('./imgs/img3.jpg');"><div class="item_descr">Sword Art Online Extra Edition</div></div>
+            <div class="item_column" style="background-image:url('./imgs/img8.jpg');"><div class="item_descr">Sword Art Online II</div></div>	
+	  </div><br/><br/>
+	  <div style="text-align:center;  padding-bottom:50px;">
+	       <button id="btnSeeMore" class="btn" onclick="window.location.href='anime.html'">See more</button>
+	  </div>	  
+    </div>
+	<div id="div_footer">
+	    <a class="a_links" href="anime.html">Anime</a>
+        <span class="vline">|</span>
+        <a class="a_links" href="manga.html">Manga</a>
+        <span class="vline">|</span>
+        <a class="a_links" href="contact.html">Contact us</a>
+		<br/><br/><span>©2015 Nice Anime</span>
+    </div>
+	<div id="div_signin" title="Sign in">
+		<br/><label>Username</label>
+		<input type="text" name="username" id="txt_username"><br/><br/>
+		<label style="padding-left:2px;">Password</label>
+		<input type="password" name="password" id="txt_password">
+		<div class="alignBtn"><button class="btn popupBtn">Sign in</button></div>
+		<div><a class="a_links">Forgot your password?</a></div><br/>
+    </div>
+	<div id="div_signup" title="Creating your account">
+		<br/><label>Username</label>
+		<input type="text" name="username" id="txt_username"><br/><br/>
+		<label style="padding-left:24px;">Email</label>
+		<input type="email" name="email" id="txt_email"><br/><br/>
+		<label style="padding-left:4px;">Password</label>
+		<input type="password" name="password" id="txt_password">
+		<div class="alignBtn"><button class="btn popupBtn">Create</button></div><br/>
+    </div>
+</body>
+</html>

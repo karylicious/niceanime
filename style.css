@@ -1,0 +1,301 @@
+body {
+	background-color:#F5F3E5;		
+	font-family:arial,sans-serif;
+}
+
+#div_header{
+	height:50px;
+	margin-top:-8px;
+	margin-left:-8px;
+	margin-right:-8px;	
+	padding-top:10px;
+	background-color:#006600;
+}
+#div_logo{
+	float:left;
+}
+#div_nav{
+	float:left;	
+	margin-left:80px;
+	margin-top:10px;
+}
+
+.vline{
+	padding-left:8px;
+	padding-right:8px;
+}
+
+
+.header_links{
+    color:#FABF8F;
+    border:1px solid;	
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	border-color:#77933C;
+	width:100px;
+	height:25px;	
+   	padding-top:5px;
+	padding-bottom:7px;
+	padding-right:27px;
+	padding-left:27px;
+	margin-right:7px;	
+	text-align:center;
+}
+
+.header_links:hover{
+	background-color:#77933C !important;
+}
+
+.header_links:link, .header_links:visited{
+	background-color:#006600;
+}
+
+#div_login{
+	float:right;	
+	color:#FABF8F;
+	margin-right:20px;
+}
+
+.dialogModal{
+	font-size:12px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border-width:3px;
+	border-color:#006600;	
+}
+.popupBtn{
+    height:25px;
+	width:70px;	
+}
+
+#btnMsg, #btnSeeMore{
+	height:35px;
+	width:110px;
+}
+
+#btnAdd{
+    height:20px;
+	width:20px;
+	padding-bottom:8px;
+}
+.btnEpis{
+	height:35px;
+	width:70px;
+	margin-top:20px;
+}
+.btn{
+	background-color:#5cbf2a;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;		
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+
+.btn:hover{
+	background-color:#44c767;
+}
+
+.btn:active{
+	position:relative;
+	top:1px;
+}
+
+#imglogo{
+	margin-top:-8px;
+	padding-left:60px;
+	border-style:none;
+}
+
+a{			
+  text-decoration:none;	
+}
+
+
+.a_links:hover{
+	color:#F79646 !important;
+	cursor:pointer;
+}
+
+.a_links:link, .a_links:visited{
+	color:#FABF8F;
+}
+.alignBtn{
+	padding-left:170px;
+	padding-top:10px;	
+}
+.div_btnMsg{
+	text-align:center;
+    padding-left:320px;
+}
+#div_body{
+	background-color:white;
+	margin:auto;
+	width:80%;
+	-moz-box-shadow:0px 2px 10px 0px rgba(50,50,50,0.75);
+	-webkit-box-shadow:11px 12px 107px -4px rgba(50,50,50,0.75);	
+	box-shadow:11px 12px 107px -4px rgba(50,50,50,0.75);
+	font-size:14px;
+	margin-top:-12px;
+padding-bottom:300px;	
+}
+
+h1{
+	font-size:18px;
+	font-family:arial, sans-serif;
+	font-weight:normal;
+	color:#006600;	
+}
+label{
+	padding-right:5px;
+}
+
+#div_footer{
+	text-align:center;
+	height:60px;	
+	font-family:arial;
+	color:#FABF8F;
+	font-size:12px;
+    margin-left:-8px;
+	margin-right:-8px;
+	margin-top:-16px;
+	padding-top:10px;
+	background-color:#006600;
+
+}
+.anime_links{
+   	height:18px;
+	width:21px;
+	text-align:center;
+}
+#div_contact{
+	
+	padding-bottom:150px;
+	display:table; 
+	margin: 0 auto;
+}
+
+#animeTitle{
+	text-align:center; 
+	background-color:#F5F3E5; 
+	border: 1px solid #FFE6CC; 
+	padding-bottom:20px; 
+	margin-top:-2px;
+	padding-top:15px;
+}
+
+.anime_detailsSub{
+	font-weight:bold;
+	background-color:#5cbf2a; 
+	color:white; 
+	width:200px;
+}
+
+#div_episodes{
+	width:440px;
+	"display:table; 
+	margin: 0 auto;
+}
+
+.tabVideo{
+	height:550px;
+}
+.episode_column{
+        display: inline-block;
+    vertical-align: top;
+    height:100px; 
+    width:150px;
+    margin-right:10px; 
+    margin-bottom:10px;
+    background-color:gray;
+    position:relative;;
+}
+.episode_column:hover{
+    cursor:pointer;
+	opacity:0.6;
+}
+
+.item_column{
+    display: inline-block;
+    vertical-align: top;	
+	height:170px;
+	width:114px;
+    margin-left:30px; 
+    margin-bottom:30px;
+    position:relative;
+    background-color:gray;
+    color:#444;
+    border:2px solid #ffffff;	
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+.item_column:hover{
+    cursor:pointer;
+	opacity:0.6;
+}
+.item_descr{		
+    background-color:white;
+	height:50px;
+	margin-top:130px;
+	text-align:center;	
+    opacity:0.8;
+}
+
+
+.div_topnumber{
+	background-color:white;		
+	position:absolute;
+	right:0;
+	top:0;	
+	height:20px;
+	width:20px;
+	font-weight:bold;
+	text-align:center;
+	opacity:0.8;	
+}
+
+#slideshowWindow{
+	height:435px;
+	margin:0;
+	padding:0;
+	position:relative;
+	overflow:hidden;	
+}
+
+.slide{
+	margin:0;
+	padding:0;
+	height:435px;
+	float:left;
+	position:relative;	
+}
+
+.slideText{
+	position:absolute;
+	top:306px;
+	left:0px;
+	width:100%;
+	height:130px;
+    margin:0;
+	padding:0;
+	color:#ffffff;
+	font-family:Arial, sans-serif;
+	font-weight:bold;
+	background-color:black;
+	opacity:0.6;	
+}
+
+.slideText a:link,.slideText a:visited{
+	color:#ffffff;
+	text-decoration:none;	
+}
+
+.slideText h2,.slideText p{
+	margin:10px 0 0 10px;
+	padding:0;
+}

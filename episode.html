@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">     
+    <title>Nice Anime</title>
+    <link rel="shortcut icon" href="icon.ico"/>
+    <link rel="stylesheet" type="text/css" href="./jquery-ui-themes-1.11.4/themes/south-street/jquery-ui.css">	
+    <script src='./jquery-ui-1.11.4/external/jquery/jquery.js'></script>
+	<script src='./jquery-ui-1.11.4/jquery-ui.js'></script>
+	<link rel="stylesheet" type="text/css" href="style.css">  
+    <script>
+	    $(function(){	
+		   $('#div_signin').hide();
+		   $('#div_signup').hide();
+		   $('#tabs').tabs();             		   
+		   $('#btnAdd').button({
+		      icons:{primary: 'ui-icon-plus'
+			  },
+			  text:false
+		   }); 
+           $('iframe').css('width', $('.tabVideo').width()).css('height', $('.tabVideo').height());
+           		   
+		});
+		function signin(){		
+		  $('#div_signin').dialog({	
+		      resizable:false,
+			  modal:true,
+              dialogClass:'no-close dialogModal'                   				   
+		  });	
+		}	
+	    function signup(){
+		  $('#div_signup').dialog({	
+			  resizable:false,
+			  modal:true,
+              dialogClass:'no-close dialogModal'				
+		  });
+		}
+		$( window ).resize(function() {	   
+            $('iframe').css('width', $('.tabVideo').width());		 
+        });
+		
+	</script>	
+</head>
+<body>
+    <div id="div_header">
+        <div id="div_logo">
+		   <a href="index.html"><img id="imglogo" src="./imgs/logo.png"></a>
+		</div>
+        <div id="div_nav">            
+            <a class="header_links" href="anime.html">Anime</a>
+            <a class="header_links" href="manga.html">Manga</a>
+            <a class="header_links" href="contact.html">Contact Us</a>            
+        </div>
+		<div id="div_login">		    
+			<a class="a_links" onclick="signin();">Log in</a>	       
+		    <span class="vline">|</span>
+		    <a class="a_links" onclick="signup();">Sign up</a>		    
+		</div>
+    </div>
+    <div id="div_body">        
+		<div style="padding-left:40px; padding-bottom:120px;">
+		   <h1><br/>Kuroko's Basketball Season 1 - Episode 1</h1>
+		   <br/>
+		   <div id="tabs" style="margin-right:50px;">
+		        <ul>
+				    <li><a href="#tabs-1">Option 1</a></li>
+				    <li><a href="#tabs-2">Option 2</a></li>
+				    <li><a href="#tabs-3">Option 3</a></li>
+				</ul>
+				<div class="tabVideo" id="tabs-1">
+				   <iframe  src="https://www.youtube.com/embed/vvQPk9cbifo" frameborder="0" allowfullscreen></iframe>   
+				</div>
+				<div class="tabVideo" id="tabs-2">
+				  <iframe src="https://player.vimeo.com/video/133829829" height="400px" width="700px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				
+				</div>
+				<div class="tabVideo" id="tabs-3">No video.</div>
+		   
+            </div>
+		    <div>
+		        <div style="float:left;"><button class="btn btnEpis">Previous</button></div>
+		        <div style="float:right; margin-right:51px;"><button class="btn btnEpis">Next</button></div>
+		    </div>			
+		</div>
+		<div style="padding-left:40px; padding-bottom:120px;">
+			<p class="anime_detailsSub">Comments</p>
+			<p style="text-align:right;">
+			    <button id="btnAdd" class="btn"></button>
+				<span style="margin-right:20px; padding-left:5px; font-weight:bold; color:#5cbf2a;">Add a comment</span>
+			</p>
+			<p>By <span style="font-weight:bold; color:green;">username</span> on Nov 17th, 2015</p>			
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate quam eu mi bibendum venenatis eu nec nibh. Sed blandit nisl a
+			nisl fringilla laoreet. Pellentesque elementum eros ut metus pulvinar accumsan. Pellentesque ut libero eleifend, fringilla orci vitae, 
+			maximus nisl.</p>
+		</div>
+    </div>
+	<div id="div_footer">
+	    <a class="a_links" href="anime.html">Anime</a>
+        <span class="vline">|</span>
+        <a class="a_links" href="manga.html">Manga</a>
+        <span class="vline">|</span>
+        <a class="a_links" href="contact.html">Contact us</a>
+		<br/><br/><span>©2015 Nice Anime</span>
+    </div>
+	<div id="div_signin" title="Sign in">
+		<br/><label>Username</label>
+		<input type="text" name="username" id="txt_username"><br/><br/>
+		<label style="padding-left:2px;">Password</label>
+		<input type="password" name="password" id="txt_password">
+		<div class="alignBtn"><button class="btn popupBtn">Sign in</button></div>
+		<div><a class="a_links">Forgot your password?</a></div><br/>
+    </div>
+	<div id="div_signup" title="Creating your account">
+		<br/><label>Username</label>
+		<input type="text" name="username" id="txt_username"><br/><br/>
+		<label style="padding-left:24px;">Email</label>
+		<input type="email" name="email" id="txt_email"><br/><br/>
+		<label style="padding-left:4px;">Password</label>
+		<input type="password" name="password" id="txt_password">
+		<div class="alignBtn"><button class="btn popupBtn">Create</button></div><br/>
+    </div>
+</body>
+</html>

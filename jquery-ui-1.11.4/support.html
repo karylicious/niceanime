@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+        
+    <title>Nice Anime</title>
+    <link rel="shortcut icon" href="icon.ico"/>
+	<link rel="stylesheet" type="text/css" href="./jquery-ui-themes-1.11.4/themes/south-street/jquery-ui.css">
+	<script src='./jquery-ui-1.11.4/external/jquery/jquery.js'></script>
+	<script src='./jquery-ui-1.11.4/jquery-ui.js'></script>
+	
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>	
+function sign(){	
+	    $(function(){            		
+			$('#div_signup').dialog({	
+                title:"Creating your account",	        
+			    height:300,
+			    width:350,
+				resizable:false,
+			    modal:true,
+                dialogClass:'no-close dialogModal'				
+		    });
+	        $('#div_signup').dialog('open');
+	       	 
+	    });
+		}
+		
+		
+		$(document).ready(function(){
+		        var currentPosition=0;
+				var slideWidth=600;
+				var numberOfSlides=$('.slide').length;
+				var slideShowInterval;
+				var speed=3000;
+				
+				slideShowInterval= setInterval(changePosition, speed);
+				$('.slide').wrapAll('<div id="slidesHolder"></div>');
+				$('.slide').css({'float':'left'});
+				$('#slidesHolder').css('width', slideWidth * numberOfSlides);
+				
+				function changePosition(){
+				   if(currentPosition== numberOfSlides-1)currentPosition=0;				   
+				   else currentPosition++;				   
+				   moveSlide();
+				}
+				function moveSlide(){
+				  $('#slidesHolder').animate({'marginLeft': slideWidth *(-currentPosition)})				
+				}
+		});
+	</script>
+	
+</head>
+<body>
+	  <div class="div_nlist">
+            <div class="nitem_column" style="background-image:url('./imgs/img1.jpg');"><p class="item_descr">Cardfight!! Vanguard G Girls</p></div>
+            <div class="nitem_column" style="background-image:url('./imgs/img2.jpg');"><p class="item_descr">God Eater</p></div>
+            <div class="nitem_column" style="background-image:url('./imgs/img6.jpg');"><p class="item_descr">One-punch man</p></div>
+            <div class="nitem_column" style="background-image:url('./imgs/img3.jpg');"><p class="item_descr">Sword Art Online Extra Edition</p></div>
+            <div class="nitem_column" style="background-image:url('./imgs/img8.jpg');"><p class="item_descr">Sword Art Online II</p></div>	
+	  </div><br/><br/>
+</body>
+</html>

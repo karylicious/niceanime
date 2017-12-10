@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">     
+    <title>Nice Anime</title>
+    <link rel="shortcut icon" href="icon.ico"/>
+    <link rel="stylesheet" type="text/css" href="./jquery-ui-themes-1.11.4/themes/south-street/jquery-ui.css">	
+    <script src='./jquery-ui-1.11.4/external/jquery/jquery.js'></script>
+	<script src='./jquery-ui-1.11.4/jquery-ui.js'></script>
+	<link rel="stylesheet" type="text/css" href="style.css">  
+    <script>
+	    $(function(){	
+		   $('#div_signin').hide();
+		   $('#div_signup').hide();	
+           $( "#top_img" ).css('width', $('#div_body').width());
+		   
+		});
+		function signin(){		
+		  $('#div_signin').dialog({	
+		      resizable:false,
+			  modal:true,
+              dialogClass:'no-close dialogModal'                   				   
+		  });	
+		}	
+	    function signup(){
+		  $('#div_signup').dialog({	
+			  resizable:false,
+			  modal:true,
+              dialogClass:'no-close dialogModal'				
+		  });
+		}
+		
+		$( window ).resize(function() {		    
+           $( "#top_img" ).css('width', $('#div_body').width());			 
+        });
+	</script>	
+</head>
+<body>
+    <div id="div_header">
+        <div id="div_logo">
+		   <a href="index.html"><img id="imglogo" src="./imgs/logo.png"></a>
+		</div>
+        <div id="div_nav">            
+            <a class="header_links" href="anime.html">Anime</a>
+            <a class="header_links" href="manga.html">Manga</a>
+            <a class="header_links" href="contact.html">Contact Us</a>            
+        </div>
+		<div id="div_login">		    
+			<a class="a_links" onclick="signin();">Log in</a>	       
+		    <span class="vline">|</span>
+		    <a class="a_links" onclick="signup();">Sign up</a>		    
+		</div>
+    </div>
+    <div id="div_body" style="padding-bottom:380px; margin-top:0px;">
+	    <div><img id="top_img" src="./imgs/kuroko.jpg"></div>
+        <h1 id="animeTitle">Kuroko's Basketball Season 1</h1>
+		<div style="padding-left:40px; padding-right:40px;">
+		    <br/>
+			<p class="anime_detailsSub">Synopsis</p>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate quam eu mi bibendum venenatis eu nec nibh. Sed blandit nisl a
+			nisl fringilla laoreet. Pellentesque elementum eros ut metus pulvinar accumsan. Pellentesque ut libero eleifend, fringilla orci vitae, 
+			maximus nisl. Etiam in lorem vitae odio molestie sodales eget ut tortor. Etiam convallis ipsum lacus, ac pretium nisl tincidunt nec. 
+			Praesent molestie augue ut vestibulum lacinia. Mauris mollis orci et ex lacinia pulvinar. Duis nisi urna, tempor vitae lorem non, 
+			tempor congue nibh. Donec sem odio, suscipit in nibh et, porta dignissim nunc. Donec nibh ligula, placerat sed arcu a, molestie auctor 
+			velit. Suspendisse non tristique libero, in facilisis nunc. Curabitur sit amet lacus eu massa scelerisque porttitor ac eu quam.
+			
+			</p>
+			<br/><br/>
+			<p class="anime_detailsSub">Information</p>
+			<span style="font-weight:bold; padding-right:3px;">Genre:</span><span>Sports</span><br/>
+			<span style="font-weight:bold; padding-right:3px;">Episodes:</span><span>25</span><br/>
+			<span style="font-weight:bold; padding-right:3px;">Year:</span><span>2012</span><br/>
+			<span style="font-weight:bold; padding-right:3px;">Production:</span><span>I.G</span><br/><br/>
+			<p class="anime_detailsSub">Episode List</p><br/>
+			<div class="div_episodes">
+                <div class="episode_column" style="background-image:url('./imgs/kuro1.jpg');" onclick="window.location.href='episode.html'"><div class="div_topnumber">1</div></div>
+                <div class="episode_column" style="background-image:url('./imgs/kuro2.png');"><div class="div_topnumber">2</div></div>
+                <div class="episode_column" style="background-image:url('./imgs/kuro3.jpeg');"><div class="div_topnumber">3</div></div>
+                <div class="episode_column" style="background-image:url('./imgs/kuro4.png');"><div class="div_topnumber">4</div></div>
+                <div class="episode_column" style="background-image:url('./imgs/kuro5.png');"><div class="div_topnumber">5</div></div>
+                <div class="episode_column" style="background-image:url('./imgs/kuro6.jpg');"><div class="div_topnumber">6</div></div>
+                <div class="episode_column" style="background-image:url('./imgs/kuro7.png');"><div class="div_topnumber">7</div></div>
+                <div class="episode_column" style="background-image:url('./imgs/kuro8.png');"><div class="div_topnumber">8</div></div>
+                <div class="episode_column" style="background-image:url('./imgs/kuro9.png');"><div class="div_topnumber">9</div></div>
+                <div class="episode_column" style="background-image:url('./imgs/kuro10.jpg');"><div class="div_topnumber">10</div></div>
+                <div class="episode_column" style="background-image:url('./imgs/kuro11.jpg');"><div class="div_topnumber">11</div></div>
+                <div class="episode_column" style="background-image:url('./imgs/kuro12.jpg');"><div class="div_topnumber">12</div></div>
+	        </div>			
+        </div>
+    </div>
+	<div id="div_footer">
+	    <a class="a_links" href="anime.html">Anime</a>
+        <span class="vline">|</span>
+        <a class="a_links" href="manga.html">Manga</a>
+        <span class="vline">|</span>
+        <a class="a_links" href="contact.html">Contact us</a>
+		<br/><br/><span>©2015 Nice Anime</span>
+    </div>
+	<div id="div_signin" title="Sign in">
+		<br/><label>Username</label>
+		<input type="text" name="username" id="txt_username"><br/><br/>
+		<label style="padding-left:2px;">Password</label>
+		<input type="password" name="password" id="txt_password">
+		<div class="alignBtn"><button class="btn popupBtn">Sign in</button></div>
+		<div><a class="a_links">Forgot your password?</a></div><br/>
+    </div>
+	<div id="div_signup" title="Creating your account">
+		<br/><label>Username</label>
+		<input type="text" name="username" id="txt_username"><br/><br/>
+		<label style="padding-left:24px;">Email</label>
+		<input type="email" name="email" id="txt_email"><br/><br/>
+		<label style="padding-left:4px;">Password</label>
+		<input type="password" name="password" id="txt_password">
+		<div class="alignBtn"><button class="btn popupBtn">Create</button></div><br/>
+    </div>
+</body>
+</html>

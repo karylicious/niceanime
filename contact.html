@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">     
+    <title>Nice Anime</title>
+    <link rel="shortcut icon" href="icon.ico"/>
+    <link rel="stylesheet" type="text/css" href="./jquery-ui-themes-1.11.4/themes/south-street/jquery-ui.css">	
+    <script src='./jquery-ui-1.11.4/external/jquery/jquery.js'></script>
+	<script src='./jquery-ui-1.11.4/jquery-ui.js'></script>
+	<link rel="stylesheet" type="text/css" href="style.css">  
+    <script>
+	    $(function(){	
+		   $('#div_signin').hide();
+		   $('#div_signup').hide();		   
+		});
+		function signin(){		
+		  $('#div_signin').dialog({	
+		      resizable:false,
+			  modal:true,
+              dialogClass:'no-close dialogModal'                   				   
+		  });	
+		}	
+	    function signup(){
+		  $('#div_signup').dialog({	
+			  resizable:false,
+			  modal:true,
+              dialogClass:'no-close dialogModal'				
+		  });
+		}
+	</script>	
+</head>
+<body>
+    <div id="div_header">
+        <div id="div_logo">
+		   <a href="index.html"><img id="imglogo" src="./imgs/logo.png"></a>
+		</div>
+        <div id="div_nav">            
+            <a class="header_links" href="anime.html">Anime</a>
+            <a class="header_links" href="manga.html">Manga</a>
+            <a class="header_links" href="contact.html">Contact Us</a>            
+        </div>
+		<div id="div_login">		    
+			<a class="a_links" onclick="signin();">Log in</a>	       
+		    <span class="vline">|</span>
+		    <a class="a_links" onclick="signup();">Sign up</a>		    
+		</div>
+    </div>
+    <div id="div_body">
+        <h1 style="padding-left:40px;"><br/>Contact Us</h1>
+		<div id="div_contact">
+		    <br/><label style="padding-left:27px;">Name</label>
+		    <input type="text" id="txt_contactname"><br/><br/>
+		    <label style="padding-left:29px;">Email</label>
+		    <input type="email" name="email" id="txt_contactemail"><br/><br/>
+		    <label style="padding-left:16px;">Subject</label>
+			<select>
+			   <option value=""></option>
+			   <option value="">Login/Registration Problems</option>
+			   <option value="">advertising/Promotional Questions</option>
+			   <option value="">Account Deletion</option>
+			   <option value="">Other</option>
+			</select><br/><br/>   
+			<label>Comment</label>
+		    <textarea id="txt_comment" rows="4" cols="50"></textarea><br/><br/>
+		    <div class="div_btnMsg"><button id="btnMsg" class="btn">Send message</button></div>			
+        </div>
+    </div>
+	<div id="div_footer">
+	    <a class="a_links" href="anime.html">Anime</a>
+        <span class="vline">|</span>
+        <a class="a_links" href="manga.html">Manga</a>
+        <span class="vline">|</span>
+        <a class="a_links" href="contact.html">Contact us</a>
+		<br/><br/><span>©2015 Nice Anime</span>
+    </div>
+	<div id="div_signin" title="Sign in">
+		<br/><label>Username</label>
+		<input type="text" name="username" id="txt_username"><br/><br/>
+		<label style="padding-left:2px;">Password</label>
+		<input type="password" name="password" id="txt_password">
+		<div class="alignBtn"><button class="btn popupBtn">Sign in</button></div>
+		<div><a class="a_links">Forgot your password?</a></div><br/>
+    </div>
+	<div id="div_signup" title="Creating your account">
+		<br/><label>Username</label>
+		<input type="text" name="username" id="txt_username"><br/><br/>
+		<label style="padding-left:24px;">Email</label>
+		<input type="email" name="email" id="txt_email"><br/><br/>
+		<label style="padding-left:4px;">Password</label>
+		<input type="password" name="password" id="txt_password">
+		<div class="alignBtn"><button class="btn popupBtn">Create</button></div><br/>
+    </div>
+</body>
+</html>
